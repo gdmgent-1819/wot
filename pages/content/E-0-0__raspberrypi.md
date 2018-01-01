@@ -61,9 +61,10 @@ Benodigdheden
 
 - Een beeldscherm (aanwezig op de campus) geconnecteerd via **HDMI (zelf mee te brengen)**
 - Een USB keyboard en muis (aanwezig op de campus)
-- Een **voeding (zelf mee te brengen)**
+- Een [voedingsadapter](https://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-stroomvoorzieningen/rpi-psu-5-1v-2-5a--eu-uk)
 - Koptelefoon of luidsprekers (optioneel)
 - Een ethernet kabel (optioneel)
+- Een [behuizing](https://www.kiwi-electronics.nl/raspberry-pi/raspberry-pi-cases/raspberry-pi-hat-behuizing-zwart) (optioneel)
 
 ### Software
 
@@ -88,5 +89,3 @@ Pinout
 {% include shared/figure.html src="https://www.jameco.com/Jameco/workshop/circuitnotes/raspberry_pi_circuit_note_fig2a.jpg" alt="Raspberry Pi - Pinout - Bron: jameco" caption="Raspberry Pi - Pinout - Bron: jameco" %}
 
 {% include shared/figure.html src="http://domoticx.com/wp-content/uploads/2015/10/Raspberry-Pi-2-Model-B-pinout.png" alt="Raspberry Pi - Pinout - Bron: domoticx" caption="Raspberry Pi - Pinout - Bron: domoticx" %}
-
-

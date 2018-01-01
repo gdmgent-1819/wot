@@ -2,7 +2,7 @@
 title: Firebase
 title_long: Firebase
 permalink: cloud/firebase/
-published: true
+published: false
 ---
 
 Wat is Firebase?

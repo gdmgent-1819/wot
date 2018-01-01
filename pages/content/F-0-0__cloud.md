@@ -2,7 +2,7 @@
 title: Cloud
 title_long: Cloud
 permalink: cloud/
-published: true
+published: false
 ---
 
 - [Firebase](./firebase/)
