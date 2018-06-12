@@ -1,0 +1,68 @@
+# --------------
+# DO NOT MODIFY!
+# --------------
+- id: 1819-JAVASCRIPT
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: JS
+    long : JavaScript
+  academic-year: 2018-2019
+  authors: # First is owner
+    - PDP
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD
+
+- id: 1819-HTML-CSS
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: HTML & CSS
+    long : HTML & CSS
+  academic-year: 2018-2019
+  authors: # First is owner
+    - PDP
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD
+
+- id: 1819-CSSE
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: CSSE
+    long : Computer Science & Software Engineering
+  academic-year: 2018-2019
+  authors: # First is owner
+    - KR
+    - AAD
+    - PDP
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD
+
+- id: 1819-WOT
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: WOT
+    long : Web of Things
+  academic-year: 2018-2019
+  authors: # First is owner
+    - PDP
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD

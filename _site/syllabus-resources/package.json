@@ -1,0 +1,16 @@
+{
+  "name": "syllabusv2-resources",
+  "version": "1.0.0",
+  "description": "Syllabus V2 Resources",
+  "main": "index.js",
+  "repository": "https://github.com/gdmgent/syllabusv2-resources.git",
+  "author": "drdynscript <drdynscript@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.0.6",
+    "lodash": "^4.17.4",
+    "lunr": "^1.0.0",
+    "oauth-js": "^0.9.9",
+    "reveal.js": "^3.6.0"
+  }
+}

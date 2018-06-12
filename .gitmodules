@@ -1,0 +1,3 @@
+[submodule "syllabus-resources"]
+	path = syllabus-resources
+	url = https://github.com/gdmgent-1819/syllabus-resources.git

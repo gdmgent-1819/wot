@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html class="no-js" lang="nl" dir="ltr">
+ 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- <meta charset="utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Most important SEO tag -->
+    <title>User Interface | Bachelor of Graphical and Digital Media | Artevelde University College Ghent</title>
+    <!-- Other SEO friendly tags -->
+    <meta name="description" content="Theme voor Syllabi Arteveldehogeschool">
+    <meta name="keywords" content="AHS, GDM, Jekyll, Theme, SASS">
+    <meta name="author" content="Bachelor of Graphical and Digital Media | Artevelde University College Ghent">
+    <meta name="copyright" content="Copyright 2010-18 Artevelde University College Ghent. All Rights Reserved.">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Web of Things">
+    <meta property="og:description" content="Syllabus voor het onderdeel WOT">
+    <meta property="og:url" content="http://localhost:4111/wot">
+    <meta property="og:site_name" content="gdm.gent">
+    <meta property="og:image" content="assets/images/ahs.png">
+    <meta property="og:image:width" content="129">
+    <meta property="og:image:height" content="129">
+    <link rel="author" type="text/plain" href="/wot/humans.txt">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//code.jquery.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <!-- http://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/wot/syllabus-resources/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/wot/syllabus-resources/assets/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/wot/syllabus-resources/assets/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/wot/syllabus-resources/assets/icons/manifest.json">
+    <link rel="mask-icon" href="/wot/syllabus-resources/assets/icons/safari-pinned-tab.svg" color="#ee9900">
+    <link rel="shortcut icon" href="/wot/syllabus-resources/assets/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="GDM">
+    <meta name="application-name" content="GDM">
+    <meta name="msapplication-config" content="/wot/syllabus-resources/assets/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/wot/syllabus-resources/assets/fonts/fontello/css/fontello.css">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="/wot/syllabus-resources/css/course.css">
+    <script>
+        window.baseurl = '/wot';
+    </script>
+    <!-- CDN Scripts -->
+    <script crossorigin="anonymous" src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Modernizr -->
+    <script src="/wot/syllabus-resources/vendor/modernizr/modernizr.min.js"></script>
+
+</head>
+<body>
+<div id="sidebar" class="ahs-sidebar">
+    <header class="ahs-header">
+        <div id="sidebar-collapse-button" class="ahs-header__courtesy-nav">
+            <i class="fa fa-bars"></i>
+        </div>
+        <h1 class="ahs-header__logo">
+            <a href="http://localhost:4111/wot/" title="Web of Things">
+                <span class="ahs-logo">
+                    <span class="ahs-logo__a"></span>
+                    <span class="ahs-logo__s ahs-logo__s--1"></span>
+                    <span class="ahs-logo__s ahs-logo__s--2"></span>
+                </span>
+                <span class="ahs-header__title">
+                    WOT
+                </span>
+            </a>
+        </h1>
+        <div class="ahs-header__search">
+            <form id="search-frm" action="/wot/search" method="get">
+                <label for="search-query"><i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i></label>
+                <input type="text" id="search-query" name="search-query" placeholder="Zoek in Web of Things">
+            </form>
+        </div>
+    </header>
+    <div class="ahs-sidebar__body">
+        <nav class="nav">
+    <h2>Main navigation</h2>
+            <ul class="nav__list nav__list--level-1">
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/introductie/" title="">Introductie</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/syntaxis/" title="">Syntaxis</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/data_types_and_structures/" title="">Datatypen &amp; datastructuren</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/lussen/" title="">Lussen</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/functies/" title="">Functies</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/objects/" title="">Objects</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/errors/" title="">Errors</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/Events/" title="">Events</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/web-apis/" title="">Web API's</a>
+        <ul class="nav__list nav__list--level-2">
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/web-apis/dom/" title="">DOM</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/web-apis/ajax/" title="">AJAX</a>
+                </li>
+            </ul>
+                </li>
+<li class="nav__item ">
+                    <a class="nav__link" href="/wot/es6/" title="">ES6</a>
+        <ul class="nav__list nav__list--level-2">
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/es6/classes/" title="">Klassen</a>
+                </li>
+            </ul>
+                </li>
+<li class="nav__item ">
+                    <a class="nav__link" href="/wot/automation/" title="">Automation</a>
+                </li>
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/oefeningen/" title="">Oefeningen</a>
+        <ul class="nav__list nav__list--level-3">
+                <li class="nav__item ">
+                    <a class="nav__link" href="/wot/api/content.json" title=""></a>
+                </li>
+            </ul>
+                </li>
+            </ul>
+            
+</nav>
+    </div>
+</div>
+<main class="ahs-main">
+    <header class="ahs-main__header">
+        <div class="ahs-main__topbar">
+            <div class="breadcrumb">
+    <a href="/wot/" itemprop="url" title="Syllabus voor het onderdeel WOT"><span itemprop="title">Web of Things</span></a>
+            <i class="fas fa-angle-right"></i>
+            <span itemprop="title">User Interface</span>
+        
+    
+</div>
+            <div class="reading">
+                <i class="fas fa-clock"></i>
+                <span class="reading__time">12 min</span>
+                <span class="reading__word-count">(737 woorden)</span>
+            </div>
+        </div>
+        <h1 class="ahs-main__heading">User Interface</h1>
+    </header>
+    <div class="ahs-main__body">
+        <div class="pagemap"></div>
+        
+<h2 id="emoji">Emoji</h2>
+
+<p><a href="http://www.emoji-cheat-sheet.com" class="button button--standard button--primary">Emoji Cheat Sheet</a></p>
+
+<h2 id="font-awesome-icons">Font Awesome Icons</h2>
+
+<p><a href="https://fontawesome.com/icons" class="button button--standard button--primary">Font Awesome Icons</a></p>
+
+<p>(<code class="highlighter-rouge">syIconFontAwesome</code>)</p>
+
+<h3 id="navigation">Navigation</h3>
+
+<p>In <code class="highlighter-rouge">_data/navigation.yml</code> for <code class="highlighter-rouge">icon:</code></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em class="fas fa-fw fa-info"> </em></td>
+      <td><code class="highlighter-rouge">fas fa-fw fa-info</code></td>
+    </tr>
+    <tr>
+      <td><em class="fas fa-fw fa-pencil-alt"> </em></td>
+      <td><code class="highlighter-rouge">fas fa-fw fa-pencil-alt</code></td>
+    </tr>
+    <tr>
+      <td><em class="fas fa-fw fa-book"> </em></td>
+      <td><code class="highlighter-rouge">fas fa-fw fa-book</code></td>
+    </tr>
+    <tr>
+      <td><em class="fas fa-fw fa-bookmark"> </em></td>
+      <td><code class="highlighter-rouge">fas fa-fw fa-bookmark</code></td>
+    </tr>
+    <tr>
+      <td><em class="fas fa-fw fa-wrench"> </em></td>
+      <td><code class="highlighter-rouge">fas fa-fw fa-wrench</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="general">General</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<em class="fas fa-fw fa-comment"> </em>Chat</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fas.fa-fw.fa-comment}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fas fa-fw fa-download"> </em>Download</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fas.fa-fw.fa-download}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="operating-systems">Operating Systems</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://developer.android.com"><em class="fab fa-fw fa-android"> </em>Android</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-android}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-linux"> </em>Linux</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-linux}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-apple"> </em>macOS</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-apple}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ubuntu.com/server"><em class="fab fa-fw fa-linux"> </em>Ubuntu Server</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-linux}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-windows"> </em>Windows</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-windows}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="browsers">Browsers</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-chrome"> </em>Chrome</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-chrome}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-edge"> </em>Edge</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-edge}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.mozilla.org/nl/firefox/new/"><em class="fab fa-fw fa-firefox"> </em>Firefox</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-firefox}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.mozilla.org/nl/firefox/developer/"><em class="fab fa-fw fa-firefox"> </em>Firefox Developer Edition</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-firefox}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-opera"> </em>Opera</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-opera}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-safari"> </em>Safari</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-safari}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="content-management-systems">Content Management Systems</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.drupal.org"><em class="fab fa-fw fa-drupal"> </em>Drupal</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-drupal}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.joomla.org"><em class="fab fa-fw fa-joomla"> </em>Joomla</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-joomla}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://nl.wordpress.org"><em class="fab fa-fw fa-wordpress"> </em>WordPress</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-wordpress}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="files">Files</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file"> </em>Bestand</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file}</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-image"> </em>Afbeelding</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-image}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-archive"> </em>Archief</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-archive}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-code"> </em>Code</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-code}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-audio"> </em>Geluid</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-audio}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-alt"> </em>Tekst</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-alt}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-video"> </em>Video</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-video}</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-excel"> </em>Microsoft Excel</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-excel}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-powerpoint"> </em>Microsoft PowerPoint</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-powerpoint}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-word"> </em>Microsoft Word</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-word}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="far fa-fw fa-file-pdf"> </em>PDF</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.far.fa-fw.fa-file-pdf}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="services">Services</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.behance.net"><em class="fab fa-fw fa-behance"> </em>Behance</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-behance}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://bitbucket.org"><em class="fab fa-fw fa-bitbucket"> </em>Bitbucket</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-bitbucket}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://codepen.io"><em class="fab fa-fw fa-codepen"> </em>CodePen</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-codepen}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://dribbble.com"><em class="fab fa-fw fa-dribbble"> </em>Dribble</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-dribbble}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.dropbox.com"><em class="fab fa-fw fa-dropbox"> </em>Dropbox</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-dropbox}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.facebook.com"><em class="fab fa-fw fa-facebook"> </em>Facebook</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-facebook}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-flickr"> </em>Flickr</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-flickr}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://git-scm.com"><em class="fab fa-fw fa-git"> </em>Git</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-git}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com"><em class="fab fa-fw fa-github"> </em>GitHub</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-github}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://about.gitlab.com"><em class="fab fa-fw fa-gitlab"> </em>GitLab</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-gitlab}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-jsfiddle"> </em>JSFiddle</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-jsfiddle}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.linkedin.com"><em class="fab fa-fw fa-linkedin"> </em>LinkedIn</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-linkedin}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-maxcdn"> </em>maxcdn</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-maxcdn}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://nl.pinterest.com"><em class="fab fa-fw fa-pinterest"> </em>Pinterest</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-pinterest}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-skype"> </em>Skype</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-skype}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://slack.com"><em class="fab fa-fw fa-slack"> </em>Slack</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-slack}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://trello.com"><em class="fab fa-fw fa-trello"> </em>Trello</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-trello}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://twitter.com"><em class="fab fa-fw fa-twitter"> </em>Twitter</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-twitter}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://vimeo.com"><em class="fab fa-fw fa-vimeo"> </em>Vimeo</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-vimeo}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.youtube.com"><em class="fab fa-fw fa-youtube"> </em>YouTube</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-youtube}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="technology">Technology</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Result</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<em class="fas fa-fw fa-code-branch"> </em>Branch</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fas.fa-fw.fa-code-branch}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fas fa-fw fa-code"> </em>Code</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fas.fa-fw.fa-code}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fas fa-fw fa-terminal"> </em>Terminal</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fas.fa-fw.fa-terminal}</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-css3-alt"> </em>CSS3</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-css3-alt}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-html5"> </em>HTML5</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-html5}</code></td>
+    </tr>
+    <tr>
+      <td>
+<em class="fab fa-fw fa-js"> </em>JavaScript</td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-js}</code></td>
+    </tr>
+    <tr>
+      <td><a href="http://lesscss.org"><em class="fab fa-fw fa-less"> </em>Less</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-less}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://secure.php.net"><em class="fab fa-fw fa-php"> </em>PHP</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-php}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://sass-lang.com"><em class="fab fa-fw fa-sass"> </em>Sass</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-sass}</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://angular.io"><em class="fab fa-fw fa-angular"> </em>Angular</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-angular}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://gruntjs.com"><em class="fab fa-fw fa-grunt"> </em>Grunt</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-grunt}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://gulpjs.com"><em class="fab fa-fw fa-gulp"> </em>Gulp.js</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-gulp}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://fontawesome.com"><em class="fab fa-fw fa-font-awesome"> </em>Font Awesome</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-font-awesome}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://laravel.com"><em class="fab fa-fw fa-laravel"> </em>Laravel</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-laravel}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://reactjs.org"><em class="fab fa-fw fa-react"> </em>React</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-react}</code></td>
+    </tr>
+    <tr>
+      <td><a href="https://vuejs.org"><em class="fab fa-fw fa-vuejs"> </em>Vue</a></td>
+      <td><code class="highlighter-rouge">*&amp;nbsp;*{:.fab.fa-fw.fa-vuejs}</code></td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+
+    <footer class="body-footer">
+        <div class="body-footer__copy" title="© 2018-2019 Bachelor in de grafische en digitale media, Arteveldehogeschool">© 2018-2019 Bachelor in de grafische en digitale media, Arteveldehogeschool</div>
+        <div class="body-footer__update">Geüpdatet op <span class="badge badge--default">2018-06-12</span>
+</div>
+        <div class="reading hidden">
+            <i class="fas fa-clock"></i>
+            <span class="reading__time">12 min</span>
+            <span class="reading__word-count">(737 woorden)</span>
+        </div>
+    </footer>
+</main>
+<button id="scroll-to-top" class="button button-tertiary" title="Scroll to top"><i class="fa fa-angle-up fa-2x"></i></button>
+
+<!-- <button id="scroll-to-top" class="button button-tertiary" title="Scroll to top"><i class="fa fa-angle-up fa-2x"></i></button>
+<button id="scroll-to-top" class="button button-tertiary" title="Scroll to top"><i class="fa fa-fw fa-chevron-up"></i></button>  
+<button id="scroll-to-top" class="button button-tertiary" title="Scroll to top"><i class="fa fa-chevron-up fa-@2x"></i></button>  -->
+
+
+<!-- CDN Scripts -->
+<script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/locale/nl.js"></script>
+<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/locale/nl-be.js"></script>
+
+<!-- Libraries Scripts -->
+<script src="/wot/syllabus-resources/vendor/lodash/lodash.js"></script>
+<script src="/wot/syllabus-resources/vendor/lunr/lunr.min.js"></script>
+
+<!-- Template Scripts -->
+<script src="/wot/syllabus-resources/js/utilities.js"></script>
+<script src="/wot/syllabus-resources/js/course.js"></script>
+<script src="/wot/syllabus-resources/js/course.pagemap.js"></script>
+<script src="/wot/syllabus-resources/js/course.search.js"></script>
+<script src="/wot/syllabus-resources/js/course.syntax-highlight.js"></script>
+
+<!-- Google Analytics Scripts -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-18202861-3', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+</body>
+</html>
