@@ -1,55 +1,130 @@
 # --------------
 # DO NOT MODIFY!
 # --------------
-- id: 1819-JAVASCRIPT
+- id: 1819-CMSDEVELOPMENT
   type: MODULE
   lang: nl
   color: primary
   title:
-    short: JS
-    long : JavaScript
+    short: CMSDEV
+    long : CMS Development
   academic-year: 2018-2019
   authors: # First is owner
-    - PDP
+    - FR
+    - EVR
+    - AAD
   programme:
     institute : AHS
     department: PBAGDM
     major     : MMP
-    minor     : NMD
 
-- id: 1819-HTML-CSS
+- id: 1819-COMPUTERSCIENCE
   type: MODULE
   lang: nl
   color: primary
   title:
-    short: HTML & CSS
-    long : HTML & CSS
-  academic-year: 2018-2019
-  authors: # First is owner
-    - PDP
-  programme:
-    institute : AHS
-    department: PBAGDM
-    major     : MMP
-    minor     : NMD
-
-- id: 1819-CSSE
-  type: MODULE
-  lang: nl
-  color: primary
-  title:
-    short: CSSE
-    long : Computer Science & Software Engineering
+    short: CS
+    long : Computer Science
   academic-year: 2018-2019
   authors: # First is owner
     - KR
     - AAD
+    - OPR
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+
+- id: 1819-MOBILEDEVELOPMENT
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: MOBDEV
+    long : Mobile Development
+  academic-year: 2018-2019
+  authors: # First is owner
     - PDP
+    - FR
+    - OPR
   programme:
     institute : AHS
     department: PBAGDM
     major     : MMP
     minor     : NMD
+
+- id: 1819-WEBDESIGN
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: WEBDES
+    long : Web Design
+  academic-year: 2018-2019
+  authors: # First is owner
+    - EVR
+    - OPR
+    - PDP
+    - SA
+  programme:
+    institute : AHS
+    department: PBAGDM
+
+- id: 1819-WEBDEVELOPMENT
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: WEBDEV
+    long : Web Development
+  academic-year: 2018-2019
+  authors: # First is owner
+    - DDW
+    - FR
+    - OPR
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD
+
+- id: 1819-WEBSCRIPTING
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: WEBSCRIPT
+    long : Web Scripting
+  academic-year: 2018-2019
+  authors: # First is owner
+    - PDP
+    - AAD
+    - DDW
+    - EVR
+    - FR
+    - OPR
+  programme:
+    institute : AHS
+    department: PBAGDM
+
+- id: 1819-UI-UX
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: UI & UX
+    long : User Interface & User eXperience
+  academic-year: 2018-2019
+  authors: # First is owner
+    - OPR
+    - BM
+    - DDW
+    - EVR
+    - PDP
+    - SA
+  programme:
+    institute : AHS
+    department: PBAGDM
 
 - id: 1819-WOT
   type: MODULE
@@ -61,8 +136,23 @@
   academic-year: 2018-2019
   authors: # First is owner
     - PDP
+    - DDW
+    - FR
   programme:
     institute : AHS
     department: PBAGDM
-    major     : MMP
-    minor     : NMD
+
+- id: 1819-XR
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: XR
+    long : Mixed Reality
+  academic-year: 2018-2019
+  authors: # First is owner
+    - OPR
+    - PDP
+  programme:
+    institute : AHS
+    department: PBAGDM
