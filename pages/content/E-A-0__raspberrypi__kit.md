@@ -1,7 +1,7 @@
 ---
-title: Unboxing Raspberry Pi IoT Learner Kit
-title_long: Unboxing Raspberry Pi IoT Learner Kit
-permalink: raspberrypi/unboxing/
+title: IoT Learner Kit
+title_long: IoT Learner Kit
+permalink: raspberrypi/kit/
 ---
 
 Inleiding
@@ -59,7 +59,7 @@ De Sense Hat bestaat uit:
 - Barometric pressure;
 - Humidity.
 
-Leuke hoeveelheid led's, inputs en sensoren. Ideaal om een aantal leuke projecten te maken voor het opleidingsonderdeel Web Of Things. Om de Sense Hat stevig te plaatsen, monteren we eerst de afstandshouders aan de Raspberry Pi.
+Leuke hoeveelheid led's, inputs en sensoren. Ideaal om een aantal leuke projecten te maken voor het opleidingsonderdelen [Internet Of Things](http://bamaflexweb.arteveldehs.be/BMFUIDetailxOLOD.aspx?a=103012&b=5&c=1) en [Web Of Things](http://bamaflexweb.arteveldehs.be/BMFUIDetailxOLOD.aspx?a=97782&b=5&c=1). Om de Sense Hat stevig te plaatsen, monteren we eerst de afstandshouders aan de Raspberry Pi.
 
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/IMG_20170904_133044.jpg" alt="Raspberry Pi 3 IoT Learner Kit - Afstandhouders" caption="Raspberry Pi 3 IoT Learner Kit - Afstandhouders" %}
 
@@ -79,7 +79,7 @@ Na het aansluiten van een extern scherm via HDMI, toetsenbord en muis kunnen we 
 
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/IMG_20170904_134046.jpg" alt="Raspberry Pi 3 Aansluiten" caption="Raspberry Pi 3 Aansluiten" %}
 
-Raspbian
+Software
 --------
 
 We zullen gebruik maken van een SD-kaart waarop [NOOBS](https://www.raspberrypi.org/documentation/installation/noobs.md) geïnstalleerd is. NOOBS staat voor **New Out Of the Box Software** en wordt gebruikt om bepaalde besturingssystemen te installeren voor de Raspberry Pi. Vanaf NOOBS v1.3.10 bevat deze installatiemanager enkel het **[Raspbian](http://raspbian.org/)** Operating System. Om een ander besturingssysteem te installeren hebben we netwerkconnectie nodig.
@@ -149,11 +149,9 @@ De `update` en `upgrade`-procedure kan een tijdje duren, zeker via Wifi. Na een 
 
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/wanm/1718/syllabi/1718-wot/IMG_20170904_140728.jpg" alt="Raspbian - Configuratie" caption="Raspbian - Configuratie" %}
 
-Via deze applicatie kunnen we het systeem (system), interfaces, performantie (performance) en localisatie (localisation) instellen. We **enable** voorlopig de interfaces: **Camera**, **SSH** en **Remote GPIO (general purpose input/output)**. Hierdoor kunnen we een aangesloten camera uitlezen, SSH-verbinding maken met de Raspberry PI en de [GPIO-aansluitingen](https://www.raspberrypi.org/documentation/usage/gpio/) van de Raspberry PI aanspreken en sturen.
+Via deze applicatie kunnen we het systeem (system), interfaces, performantie (performance) en localisatie (localisation) instellen. We activeren (enable) voorlopig de interfaces: **Camera**, **SSH** en **Remote GPIO (general purpose input/output)**. Hierdoor kunnen we een aangesloten camera uitlezen, SSH-verbinding maken met de Raspberry PI en de [GPIO-aansluitingen](https://www.raspberrypi.org/documentation/usage/gpio/) van de Raspberry PI aanspreken en sturen.
 
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/wanm/1718/syllabi/1718-wot/IMG_20170904_140936.jpg" alt="Raspbian - Configuratie: Interfaces" caption="Raspbian - Configuratie: Interfaces" %}
-
-### Localisation
 
 Vervolgens stellen we de **Localisation** in, deze bestaat uit:
 
@@ -176,8 +174,6 @@ In deze configuratie verander best het **paswoord** voor de Raspberry Pi alsook 
 
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/wanm/1718/syllabi/1718-wot/IMG_20170904_141439.jpg" alt="Raspbian - Update" caption="Raspbian - CLI: raspi-config" %}
 
-### Datum en Tijd
-
 We kunnen de datum en tijd instellen met en zonder het internet. Zonder het internet voeren we hetvolgende commando uit:
 
 {% highlight bash %}
@@ -191,12 +187,20 @@ Of we kunnen, indien we internet hebben, gebruik maken van een **sntp**-server:
 sudo sntp -s time.google.com
 {% endhighlight %}
 
-De aanpassing van tijd en datum kan noodzakelijk zijn om bepaalde tools, software e.d. te kunnen downloaden.
+of
 
-Bronnen
--------
+{% highlight bash %}
+sudo sntp -s 0.debian.pool.ntp.prg
+{% endhighlight %}
 
-> Links
-> -----
-> - <https://www.raspberrypi.org/documentation/configuration/raspi-config.md>
+Via [ntpupdate](http://doc.ntp.org/4.1.1/ntpdate.htm) is het nog eenvoudiger om de datum en tijd aan te passen.
+
+{% highlight bash %}
+sudo apt-get install ntpdate
+sudo ntpdate pool.ntp.org
+{% endhighlight %}
+
+De aanpassing van tijd en datum kan noodzakelijk zijn om bepaalde tools, software e.d. te kunnen downloaden. 
+
+> Herstart Raspbian na iedere wijziging in de configuratie!
 {:.card.card-definition}

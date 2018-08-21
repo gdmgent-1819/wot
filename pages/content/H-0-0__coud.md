@@ -1,6 +1,13 @@
 ---
-title: Raspberry Pi
-title_long: Raspberry Pi
-permalink: raspberrypi/
+title: Cloud
+title_long: Cloud
+permalink: cloud/
 ---
 
+Wat is IAAS?
+
+
+
+Wat is PAAS?
+
+Wat is SASS?
