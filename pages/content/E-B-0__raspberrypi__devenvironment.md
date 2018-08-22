@@ -12,29 +12,42 @@ Het gebruik van de programmeertaal [Python](https://www.python.org/) is onontbee
 1\. Installatie van de vereisten (prerequisites)
 
 {% highlight bash %}
+sudo apt-get update
 sudo apt install libffi-dev libbz2-dev liblzma-dev libsqlite3-dev libncurses5-dev libgdbm-dev zlib1g-dev libreadline-dev libssl-dev tk-dev build-essential libncursesw5-dev libc6-dev openssl git
 {% endhighlight %}
 
-2\. Downloaden van de Pyhton 3.7.0 bronbestanden (source code) via [github](https://github.com/python/cpython/archive/v3.7.0.tar.gz) of via [python organisatie](https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz).
+2\. Downloaden van de Pyhton 3.6.6 bronbestanden (source code) via [github](https://github.com/python/cpython/archive/v3.6.6.tar.gz) of via [python organisatie](https://www.python.org/ftp/python/3.6.6/Python-3.6.6.tar.xz).
 
 
 {% highlight bash %}
-wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz 
-tar xf Python-3.7.0.tar.xz 
+wget https://www.python.org/ftp/python/3.6.6/Python-3.6.6.tar.xz
+tar xf Python-3.6.6.tar.xz 
 {% endhighlight %}
 
 3\. Configuratie
 
 {% highlight bash %}
-cd Python-3.7.0
-./configure --prefix=$HOME/.local --enable-optimizations
+cd Python-3.6.6
+./configure --prefix=$HOME/.local
 {% endhighlight %}
 
 4\. Installatie via built proces
 
 {% highlight bash %}
-make -j 4 -l 4
+make -j 5 -l 4
 make install
 {% endhighlight %}
 
+5\. Pad installen naar de Python3.7 uitvoerbaar bestand
+
+{% highlight bash %}
+if [ -d "$HOME/.local/bin" ] ; then
+	PATH="$HOME/.local/bin:$PATH"
+fi
+{% endhighlight %}
+
 pip install --upgrade pip
+
+Node.js
+-------
+
