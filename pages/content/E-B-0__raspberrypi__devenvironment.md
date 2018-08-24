@@ -70,25 +70,109 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Python pakketten worden geïnstalleerd via het commandline tool `pip`. [pip](https://pypi.org/project/pip/), de python package manager, kunnen we voor de voorgaande geïnstalleerde versie van python testen m.b.v. `pip3.6`.
 
+### SenseHat SDK
+
+De [installatie](https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/2) van de Sense Hat-sdk is "pretty straightforward". Zorg er eerst voor dat alle APT-paketten up-to-date zijn. Vervolgens installeren we het sense-hat-pakket. Na installatie van dit pakket herstarten we het besturingssysteem Raspbian op de Raspberry Pi3.
+
+{% highlight bash %}
+sudo apt-get update 
+sudo apt-get install sense-hat 
+sudo reboot 
+{% endhighlight %}
+
 
 Node.js
 -------
 
-Om Node.js op Raspberry Pi3 te installeren voeren we de volgende commando's uit:
+Om Node.js op Raspberry Pi3 te installeren kunnen we best gebruik maken van [Node Version Manager](https://github.com/creationix/nvm). De installatie van NVM is vrij eenvoudig.
 
 {% highlight bash %} 
-wget https://nodejs.org/dist/v10.9.0/node-v10.9.0-linux-armv7l.tar.gz 
-tar -xvf node-v10.9.0-linux-armv7l.tar.gz  
-cd node-v10.9.0-linux-armv7l.tar.gz 
-sudo cp -R * /usr/local/ 
-sudo reboot 
+$ git clone https://github.com/creationix/nvm.git ~/.nvm
+$ sudo echo "source ~/.nvm/nvm.sh" >> ~/.bashrc && sudo echo "source ~/.nvm/nvm.sh" >> ~/.profile
 {% endhighlight %}
 
-Om de installatie te testen, na reboot, voeren we de volgende commando's uit:
+Op 24-08-2018 bedraagt de NVM versie 0.3.11. Eenvodig te bevragen via het commando `nvm --version`.
+
+Om een bepaalde node.js versie te installeren voeren we, voor versie v10.9.0, het commando `nvm install 10.9.0` uit.
+
+{% highlight bash %} 
+$ node -v
+v10.9.0
+{% endhighlight %}
+
+{% highlight bash %} 
+$ nvm list
+->      v10.9.0
+         system
+default -> 10.9.0 (-> v10.9.0)
+node -> stable (-> v10.9.0) (default)
+stable -> 10.9 (-> v10.9.0) (default)
+iojs -> N/A (default)
+unstable -> N/A (default)
+lts/* -> lts/carbon (-> N/A)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.14.4 (-> N/A)
+lts/carbon -> v8.11.4 (-> N/A)
+{% endhighlight %}
+
+{% highlight bash %} 
+$ npm -v
+6.2.0
+{% endhighlight %}
+
+{% highlight bash %} 
+$ npm -g install npm@latest --allow-root --unsafe-perm 
+$ npm -v
+6.4.0
+{% endhighlight %}
+
+### nodeimu
+
+Nodejs bindings om toegang te hebben tot IMU, pressure, humidity en temperature data gebruik makend van de [RTIMULib2](https://github.com/richards-tech/RTIMULib2.git)-bibliotheek. Deze bibliotheek gebruikt [nodejs/nan](https://github.com/nodejs/nan.git). Deze bibliotheek bevat **Native Abstractions** voor Nodejs. nodeimu is getest op de [Sense Hat](https://www.raspberrypi.org/products/sense-hat/) en op [GrovePi+](http://www.dexterindustries.com/grovepi/) voor de Raspberry Pi3.
 
 {% highlight bash %}
-node -v
-npm -v
+git clone https://github.com/rupnikj/nodeimu --recursive
+cd nodeimu 
+npm install node-gyp -g 
+npm install 
 {% endhighlight %}
 
-Deze commando's tonen de versie van respectievelijk de node- en nmp-cli. Op 24-08-2018 draagt node de versie v10.9.0.
+### Raspberry Pi Sense HAT LED matrix driver
+
+[Node module](https://github.com/resin-io-playground/sense-joystick) om de Raspberry Pi Sense HAT 8x8 RGB LED matrix aan te spreken via javascript. Origineel een fork van Jochen Hinrichsen's [sense-hat-matrix](https://github.com/jhinrichsen/sense-hat-matrix) bibliotheek. We voegen deze toe aan een bestaand project via `npm` of `yarn`.
+
+{% highlight bash %}
+npm install sense-hat-led --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add sense-hat-led
+{% endhighlight %}
+
+### Sense Hat Joystick
+
+Een [node module](https://github.com/resin-io-playground/sense-joystick) om te intrageren met de sensehat joystick. We voegen deze toe aan een bestaand project via `npm` of `yarn`.
+
+{% highlight bash %}
+npm install sense-joystick --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add sense-joystick
+{% endhighlight %}
+
+### node-rpio
+
+Raspberry Pi GPIO bibliotheek voor node.js.
+
+### rpi-gpio
+
+Raspberry Pi GPIO bibliotheek voor node.js.
+
+### onoff
+
+Raspberry Pi GPIO bibliotheek voor node.js.
