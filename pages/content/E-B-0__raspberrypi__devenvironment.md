@@ -80,6 +80,18 @@ sudo apt-get install sense-hat
 sudo reboot 
 {% endhighlight %}
 
+### Flask
+
+[Flask](http://flask.pocoo.org/)
+
+### Pygame
+
+[Pygame](https://www.pygame.org/wiki/GettingStarted#Pygame%20Installation)
+
+### Processing
+
+[Processing voor python](https://github.com/jdf/processing.py)
+
 
 Node.js
 -------
@@ -167,12 +179,101 @@ yarn add sense-joystick
 
 ### node-rpio
 
-Raspberry Pi GPIO bibliotheek voor node.js.
+[node-rpio](https://github.com/jperkin/node-rpio) Raspberry Pi bibliotheek (node.js) voor toegang tot de GPIO interface alsook i²c, PWM, en SPI.
+
+{% highlight bash %}
+npm install rpio --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add rpio
+{% endhighlight %}
+
+Standaard wordt de module `/dev/gpiomem`gebruikt om toegang te hebben tot de GPIO. De gebruiker, die toegang wil hebben tot de GPIO, moet lid zijn van de **gpio groep**.
+
+{% highlight bash %}
+$ cat >/etc/udev/rules.d/20-gpiomem.rules <<EOF
+SUBSYSTEM=="bcm2835-gpiomem", KERNEL=="gpiomem", GROUP="gpio", MODE="0660"
+EOF
+{% endhighlight %}
 
 ### rpi-gpio
 
-Raspberry Pi GPIO bibliotheek voor node.js.
+M.b.v. de [rpi-gpio](https://github.com/JamesBarwell/rpi-gpio.js#readme) bibliotheek kunnen we de GPIO pinnen aanspreken.
+
+{% highlight bash %}
+npm install rpi-gpio --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add rpi-gpio
+{% endhighlight %}
 
 ### onoff
 
-Raspberry Pi GPIO bibliotheek voor node.js.
+[onoff](https://github.com/jperkin/node-rpio) geeft GPIO toegang en **interrupt** detectie met Node.js op Linux boards zoals de Raspberry Pi, C.H.I.P. or BeagleBone.
+
+{% highlight bash %}
+npm install onoff --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add onoff
+{% endhighlight %}
+
+### Pi-camera
+
+[Pi-camera](https://github.com/stetsmando/pi-camera#readme) bibliotheek om de [Raspberry Pi Camera CLI](https://www.raspberrypi.org/documentation/usage/camera/raspicam/README.md) aan te spreken.
+
+{% highlight bash %}
+npm install pi-camera --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add pi-camera
+{% endhighlight %}
+
+### node-raspicam
+
+https://github.com/troyth/node-raspicam
+A Node.js-based controller module for the Raspberry Pi camera based on a command structure similar to Johnny-Five
+
+{% highlight bash %}
+npm install raspicam --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add raspicam
+{% endhighlight %}
+
+### Johnny-Five
+
+[Johnny-Five](http://johnny-five.io/) is de [JavaScript Robotics & IoT Platform](http://www.amazon.com/Make-JavaScript-Robotics-Raspberry-BeagleBone/dp/1457186950). Uitgegeven door [Bocoup](http://www.bocoup.com/) in 2012.
+
+[Pin outline](https://github.com/nebrius/raspi-io/wiki/Pin-Information)
+[WiringPi pin outline](https://pinout.xyz/pinout/wiringpi)
+
+IDE
+---
+
+### Geany
+
+{% highlight bash %}
+sudo apt-get install geany
+{% endhighlight %}
+
+### Ninja
+
+{% highlight bash %}
+sudo apt-get install ninja-ide
+{% endhighlight %}
