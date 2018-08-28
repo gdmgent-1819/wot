@@ -277,3 +277,147 @@ sudo apt-get install geany
 {% highlight bash %}
 sudo apt-get install ninja-ide
 {% endhighlight %}
+
+Sharing
+-------
+
+### hostname
+
+De hostname van de PI kan ingesteld worden via het menu Home > Preferences > Raspberry Pi Configuration. In het tabblad System kan je bij het invulveld bij hostname deze wijzigen. 
+
+> - Naamgeving hostname: `pi-ahs-{ahs-loginnaam}`. Bijv. `pi-ahs-phildp`.
+> - Wijzig ook het paswoord van jouw Raspberry Pi. Standaard is dit het paswoord `raspberry`.
+> - Herstart steeds de Pi na aanpassingen aan de configuratie.
+{:.card.card-definition}
+
+### IP-adres
+
+Het [IP-adres](https://nl.wikipedia.org/wiki/IP-adres) wordt toegekend aan de Raspberry Pi na connectie met een netwerk. Met het commando `ifconfig`, op de Pi, kunnen we dit IP-adres opvragen. In het onderstaande voorbeeld is het IP-adres `192.168.0.7` toegekend.
+
+{% highlight bash %}
+$ ifconfig
+
+eth0      Link encap:Ethernet  HWaddr b8:27:eb:2c:eb:a7
+          inet6 addr: fe80::22ec:737d:b91:e8b1/64 Scope:Link
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:204 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:204 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:16896 (16.5 KiB)  TX bytes:16896 (16.5 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr b8:27:eb:79:be:f2 
+          inet addr:192.168.0.7  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::4aec:7221:9d0d:368e/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:784 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:471 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:975509 (952.6 KiB)  TX bytes:51520 (50.3 KiB)
+{% endhighlight %}
+
+Het toegekend IP-adres kan ook opgevraagd worden, op de Pi, via het `hostname` commando.
+
+{% highlight bash %}
+$ hostname -I
+192.168.0.7
+{% endhighlight %}
+
+De bovenstaande methoden kunnen enkel toegepast worden indien een scherm, toetsenbord en muis verbonden is met de Pi. Wanneer we de Pi headless (zonder scherm, toetsenbord en muis) connecteren, moeten we gebruik maken van andere [methoden](https://www.raspberrypi.org/documentation/remote-access/ip-address.md). 
+
+Op Raspbian wordt standaard de [Avahi-service](https://en.wikipedia.org/wiki/Avahi_(software)) actief meegeleverd, dat ondermeer [Multicast DNS](https://en.wikipedia.org/wiki/Multicast_DNS) ondersteunt. Via mDNS kunnen we de Pi aanspreken m.b.v. de hostname aangevuld met `.local`.
+
+{% highlight bash %}
+$ ping pi-mercury.local
+PING pi-mercury.local (192.168.0.7): 56 data bytes
+64 bytes from 192.168.0.7: icmp_seq=0 ttl=64 time=6.787 ms
+64 bytes from 192.168.0.7: icmp_seq=1 ttl=64 time=12.070 ms
+64 bytes from 192.168.0.7: icmp_seq=2 ttl=64 time=8.184 ms
+64 bytes from 192.168.0.7: icmp_seq=3 ttl=64 time=8.082 ms
+64 bytes from 192.168.0.7: icmp_seq=4 ttl=64 time=15.633 ms
+64 bytes from 192.168.0.7: icmp_seq=5 ttl=64 time=8.122 ms
+64 bytes from 192.168.0.7: icmp_seq=6 ttl=64 time=16.413 ms
+64 bytes from 192.168.0.7: icmp_seq=7 ttl=64 time=6.134 ms
+64 bytes from 192.168.0.7: icmp_seq=8 ttl=64 time=9.032 ms
+64 bytes from 192.168.0.7: icmp_seq=9 ttl=64 time=43.510 ms
+64 bytes from 192.168.0.7: icmp_seq=10 ttl=64 time=11.083 ms
+64 bytes from 192.168.0.7: icmp_seq=11 ttl=64 time=8.686 ms
+64 bytes from 192.168.0.7: icmp_seq=12 ttl=64 time=6.532 ms
+^C
+--- pi-mercury.local ping statistics ---
+13 packets transmitted, 13 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 6.134/12.328/43.510/9.532 ms
+{% endhighlight %}
+
+Nog andere populaire methoden om het netwerk te scannen zijn: [nmap](https://nmap.org/download.html) en [Fling](https://www.fing.io/).
+
+### SSH
+
+Om een [SSH](https://en.wikipedia.org/wiki/Secure_Shell)-verbinding tot stand te brengen met de Pi kunnen we [macOS](https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md) gebruik maken van het `ssh` cli-tool, op Windows maken we gebruik van bijvoorbeeld [Putty](https://www.putty.org/). SSH staart voor Secure SHell en wordt gebruikt om remote in te loggen met een een computer en dit op een veilige manier.
+
+{% highlight bash %}
+$ ssh pi@192.168.0.7
+The authenticity of host '192.168.0.7 (192.168.0.7)' can't be established.
+ECDSA key fingerprint is 1c:45:e2:51:0e:c6:dc:a8:bf:8d:00:65:41:f4:98:6c.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.0.7' (ECDSA) to the list of known hosts.
+pi@192.168.0.7's password:
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Aug 27 19:37:57 2018 from 192.168.0.6
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+pi@pi-mercury:~ $
+{% endhighlight %}
+
+Wanneer je de fout **manpath: can't set the locale; make sure $LC_* and $LANG are correct** ervaart, moeten we de volgende handelingen uitvoeren.
+
+{% highlight bash %}
+$ sudo dpkg-reconfigure locales
+{% endhighlight %}
+
+Selecteer vervolgens de locales: `en_GB.UTF-8`, `en_US.UTF-8`, `nl_BE.UTF-8` en `nl_NL.UTF-8`.
+
+Vermits de Pi ook een hostname heeft gekregen, kunnen we via SSH ook connecteren via de hostname m.b.v. mDNS.
+
+{% highlight bash %}
+$ ssh pi@pi-mercury.local
+Warning: Permanently added the ECDSA host key for IP address 'fe80::4aec:7221:9d0d:368e%en0' to the list of known hosts.
+pi@pi-mercury.local's password:
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Mon Aug 27 20:41:33 2018
+pi@pi-mercury:~ $
+{% endhighlight %}
+
+We merken ook op dat de voorgaanden fout i.v.m. **locales** verdwenen is.
+
+Om de SSH-sessie te verlaten voeren we het commando `exit` uit in de terminal.
+
+{% highlight bash %}
+$ exit
+uitgelogd
+Connection to pi-mercury.local closed.
+{% endhighlight %}
+
+### Folders
+
