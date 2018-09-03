@@ -359,6 +359,9 @@ round-trip min/avg/max/stddev = 6.134/12.328/43.510/9.532 ms
 
 Nog andere populaire methoden om het netwerk te scannen zijn: [nmap](https://nmap.org/download.html) en [Fling](https://www.fing.io/).
 
+> Binnen het netwerk van de Arteveldehogeschool zal de hostname-methode niet werken.
+{:.card.card-definition}
+
 ### SSH
 
 Om een [SSH](https://en.wikipedia.org/wiki/Secure_Shell)-verbinding tot stand te brengen met de Pi kunnen we [macOS](https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md) gebruik maken van het `ssh` cli-tool, op Windows maken we gebruik van bijvoorbeeld [Putty](https://www.putty.org/). SSH staart voor Secure SHell en wordt gebruikt om remote in te loggen met een een computer en dit op een veilige manier.
@@ -421,3 +424,39 @@ Connection to pi-mercury.local closed.
 
 ### Folders
 
+#### samba
+
+{% highlight bash %}
+$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+$ sudo apt-get install samba samba-common-bin
+{% endhighlight %}
+
+{% highlight bash %}
+$ mkdir /home/pi/pishared
+$ chmod 777 /home/pi/pishared
+{% endhighlight %}
+
+{% highlight bash %}
+$ sudo nano /etc/samba/smb.conf
+{% endhighlight %}
+
+{% highlight txt %}
+[PiSharedMercury]
+comment = Mercury Pi Server Folder
+path = /home/pi/pishared
+browseable = yes
+writeable = yes
+only guest = no
+create mask = 0777
+directory mask = 0777
+public = no
+read only = no
+guest ok = no
+{% endhighlight %}
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_1.png" alt="Samba - Verbind met server" caption="Samba - Verbind met server" %}
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_2.png" alt="Samba - Inloggen" caption="Samba - Inloggen" %}
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_3.png" alt="Samba " caption="Raspbian - Update" %}
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_4.png" alt="Raspbian - Update" caption="Raspbian - Update" %}
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_5.png" alt="Raspbian - Update" caption="Raspbian - Update" %}
