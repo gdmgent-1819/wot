@@ -455,6 +455,10 @@ read only = no
 guest ok = no
 {% endhighlight %}
 
+##### macOS
+
+
+Verbinden met de Raspberry Pi, via IP-adres, m.b.v. "Verbind met de server"
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_1.png" alt="Samba - Verbind met server" caption="Samba - Verbind met server" %}
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_2.png" alt="Samba - Inloggen" caption="Samba - Inloggen" %}
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_3.png" alt="Samba " caption="Raspbian - Update" %}
