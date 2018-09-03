@@ -7,10 +7,8 @@ mathjax: enabled
 
 Wat is elektriciteit? 
 ---------------------
+$$U = IxR$$ 
 
-$$2^{128}$$
-
-$$W_{c_1} = 100 \% \neq 99 \%$$
 
 Wat is spanning?
 ----------------
