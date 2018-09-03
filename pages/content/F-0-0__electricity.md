@@ -2,14 +2,15 @@
 title: Electriciteit
 title_long: Electriciteit
 permalink: electricity/
+mathjax: enabled
 ---
 
 Wat is elektriciteit? 
 ---------------------
 
- {% raw %}
-$$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
- {% endraw %}
+$$2^{128}$$
+
+$$W_{c_1} = 100 \% \neq 99 \%$$
 
 Wat is spanning?
 ----------------
