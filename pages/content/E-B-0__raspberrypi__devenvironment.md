@@ -426,20 +426,34 @@ Connection to pi-mercury.local closed.
 
 #### samba
 
+Samba is [beschikbaar](https://www.raspberrypi.org/magpi/samba-file-server/) in  de Raspbian’s standaard software repositories. Zorg ervoor dat het volledig is geupdated, en installeer vervolgens Samba via `apt-get`. Open een Terminal en type:
+
 {% highlight bash %}
 $ sudo apt-get update
 $ sudo apt-get dist-upgrade
 $ sudo apt-get install samba samba-common-bin
 {% endhighlight %}
 
+Aanmaak van de shared directory kunnen we via het `mkdir`-commando. Daarna stellen we de toegangsrechten in via `chmod`. `1777` betekent dat deze folder niet kan verwijderd worden (1) en dat iedereen toegang heeft tot deze folder (777), na inloggen.
+
 {% highlight bash %}
 $ mkdir /home/pi/pishared
-$ chmod 777 /home/pi/pishared
+$ chmod 1777 /home/pi/pishared
 {% endhighlight %}
+
+De twee regels kunnen ook in een regel geschreven worden:
+
+{% highlight bash %}
+$ sudo mkdir -m 1777 /home/pi/pishared
+{% endhighlight %}
+
+Editeer vervolgens de [Samba's config files](https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html) om de **file share** toegankelijk te maken.
 
 {% highlight bash %}
 $ sudo nano /etc/samba/smb.conf
 {% endhighlight %}
+
+Voeg de volgende inhoud toe aan het `smb.conf`-bestand.
 
 {% highlight txt %}
 [PiSharedMercury]
@@ -455,12 +469,49 @@ read only = no
 guest ok = no
 {% endhighlight %}
 
+Dit betekent dat iedereen alle bestanden kan lezen, schrijven en uitvoeren in deze gedeelde folder door in te loggen als een Samba gebruiker. Gewone bezoekers krijgen geen toegang tot deze bestanden.
+
+Een Samba gebruiker kunnen we aanmaken d.m.v het `smbpasswd`-commando, zoals in het onderstaande voorbeeld.
+
+{% highlight bash %}
+sudo smbpasswd -a pi
+{% endhighlight %}
+
+Herstart de Samba-service zodat de wijzigingen van kracht zijn (smb.conf en Samba users).
+
+{% highlight bash %}
+sudo /etc/init.d/samba restart
+{% endhighlight %}
+
+> Samba start automatisch tijdens het opstarten van de Pi. Na connectie met een shared folder kunnen we de Raspberry Pi "headless" gebruiken, dus zonder monitor, toetsenbord en muis.
+{:.card.card-definition}
+
 ##### macOS
 
+1\. Verbinden met de Raspberry Pi, via IP-adres, m.b.v. "Verbind met de server"-optie in de Finder-app. Gebruik hierbij het [smb](https://en.wikipedia.org/wiki/Samba_(software))-protocol.
 
-Verbinden met de Raspberry Pi, via IP-adres, m.b.v. "Verbind met de server"
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_1.png" alt="Samba - Verbind met server" caption="Samba - Verbind met server" %}
+
+2\. Geef vervolgens jouw samba-account (naam em wachtwoord) in. Bewaar deze settings in jouw sleutelhanger indien gewenst. 
+
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_2.png" alt="Samba - Inloggen" caption="Samba - Inloggen" %}
-{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_3.png" alt="Samba " caption="Raspbian - Update" %}
-{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_4.png" alt="Raspbian - Update" caption="Raspbian - Update" %}
-{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_5.png" alt="Raspbian - Update" caption="Raspbian - Update" %}
+
+3\. Selecteer de volumes die je wil activeren op het gekoppelde ip-adres. In dit geval selecteren we de "shared"-folder `PiSharedMercury`.
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_3.png" alt="Samba - Selecteer volumes" caption="Samba - Selecteer volumes" %}
+
+4\. Open shared folder in Finder
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_4.png" alt="Finder - Open shared folder" caption="Finder - Open shared folder" %}
+
+5\. Do some stuff in Finder
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/smb_5.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
+
+##### Windows
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_1.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_2.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_3.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
