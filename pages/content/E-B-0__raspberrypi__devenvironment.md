@@ -243,8 +243,7 @@ yarn add pi-camera
 
 ### node-raspicam
 
-https://github.com/troyth/node-raspicam
-A Node.js-based controller module for the Raspberry Pi camera based on a command structure similar to Johnny-Five
+[node-raspicam](https://github.com/troyth/node-raspicam) is een Node.js controller module voor de Raspberry Pi camera gebaseerd op een structuur gelijkaardig met Johnny-Five.
 
 {% highlight bash %}
 npm install raspicam --save
@@ -510,8 +509,51 @@ sudo /etc/init.d/samba restart
 
 ##### Windows
 
-{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_1.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
+1\. Ga naar de verkenner en selecteer "this pc". Klik vervolgens op de actieknop "Map network drive". Selecteer de **drive letter** die je wenst toe te kennen aan deze network drive. Geeft daarna de netwerk-folder in via ip-adres of netwerknaam.
 
-{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_2.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_1.png" alt="Verkenner - Map Network Drive" caption="Verkenner - Map Network Drive" %}
 
-{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_3.png" alt="Finder - Do some stuff" caption="Finder - Do some stuff" %}
+2\. Geef e netwerk credentials in.
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_2.png" alt="Verkenner - Network Drive Credentials" caption="Verkenner - Network Drive Credentials" %}
+
+3\. De netwerk folder is nu beschikbaar via de verkenner.
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/samba_3.png" alt="Verkenner - Network Drive Connected" caption="Verkenner - Network Drive Connected" %}
+
+#### netatalk
+
+[Netatalk](http://netatalk.sourceforge.net/) is een gratis "Open Source" AFP fileserver. Een Netatalk server is in staat vele Macintosh clients simultaan te dienen als een AppleShare File Server (AFP).
+
+{% highlight bash %}
+sudo apt-get install netatalk
+{% endhighlight %}
+
+2\. Stop de `netatalk` service
+
+{% highlight bash %}
+sudo /etc/init.d/netatalk stop
+{% endhighlight %}
+
+3\. Open het configuratiebestand `/AppleVolumes.default`.
+
+{% highlight bash %}
+sudo nano /etc/netatalk/AppleVolumes.default
+{% endhighlight %}
+
+Je kan de mount folder veranderen, de standaard waarde: `~/ "Home Directory`.
+
+4\. Start de `netatalk` service opnieuw
+
+{% highlight bash %}
+sudo /etc/init.d/netatalk start
+{% endhighlight %}
+
+5\. Connectie maken met de netwerk folder via `open` commando in macOS.
+
+{% highlight bash %}
+open afp://10.5.128.3
+{% endhighlight %}
+
+{% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/open_afp.png" alt="Open - afp" caption="Open - afp" %}
+
