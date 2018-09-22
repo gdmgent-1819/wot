@@ -2,6 +2,7 @@
 title: Introductie
 title_long: Introductie
 permalink: introductie/
+published: false
 ---
 
 Wat is het Internet?
