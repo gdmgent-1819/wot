@@ -133,18 +133,25 @@ $ npm -v
 {% endhighlight %}
 
 
-IDE
----
+IDE's
+-----
 
 ### Geany
 
+Geany is een vrije platformonafhankelijke broncode-editor en IDE. Het is gebaseerd op GTK+ en het maakt gebruik van Scintilla. Geany kan op allerlei platform gebruikt worden, waaronder Windows, Linux, Mac OS X, BSD en Solaris. Geany is vrijgegeven onder de GPL en is bijgevolg opensourcesoftware. Het ondesretunt enorm veel [programmeertalen](https://www.geany.org/Main/AllFiletypes).
+
 {% highlight bash %}
+sudo apt-get update
 sudo apt-get install geany
 {% endhighlight %}
 
 ### Ninja
 
+Ninja-IDE is een cross-platform IDE. Ninje-IDE runt op allerlei platformen, waaronder Windows, Linux, Mac OS X, BSD en Solaris. Het laat developers toe om applicaties te maken voor allerlei doelen en dat op een gemakkelijke en aangename manier.
+
 {% highlight bash %}
+sudo apt-add-repository ppa:ninja-ide-developers/ninja-ide-stable
+sudo apt-get update
 sudo apt-get install ninja-ide
 {% endhighlight %}
 

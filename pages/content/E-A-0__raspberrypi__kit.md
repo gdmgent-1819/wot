@@ -30,25 +30,11 @@ Zoals eerder beschreven bestaat deze kit uit: [Raspberry Pi 3](https://www.kiwi-
 
 {% include shared/figure.html src="http://www.arteveldehogeschool.be/campusGDM/gdmgent/wot/IMG_20170904_132448.jpg" alt="Raspberry Pi 3 IoT Learner Kit - Onderdelen" caption="Raspberry Pi 3 IoT Learner Kit - Onderdelen" %}
 
-De [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) heeft de volgende specificaties:
-
-- Quad Core 1.2GHz Broadcom BCM2837 64bit CPU;
-- 1GB RAM;
-- BCM43438 wireless LAN and Bluetooth Low Energy (BLE) on board;
-- 40-pin extended GPIO;
-- 4 USB 2 ports;
-- 4 Pole stereo output and composite video port;
-- Full size HDMI;
-- CSI camera port for connecting a Raspberry Pi camera;
-- DSI display port for connecting a Raspberry Pi touchscreen display;
-- Micro SD port for loading your operating system and storing data;
-- Upgraded switched Micro USB power source up to 2.5A.
-
-Krachtig genoeg dus om servers (Node.js, Rabbit MQ, ...) erop te draaien. Goed dat deze versie ook uitgerust is met Wifi, waardoor dit device **draagbaar** (portable) is. Via de [GPIO](https://en.wikipedia.org/wiki/General-purpose_input/output) (General Purpose Input/Output), een bus op een electronicacircuit gebruikt voor Input en Output (I/O), kunnen we electronische signalen sturen in de Raspberry Pi en ook uitsturen. Drukken we bijvoorbeeld op een knop die verbonden is met de Raspberry Pi, dan kan een programma, draaiend op de Raspberry Pi, reageren op deze input door een een gestandaardiseerd bericht te sturen naar de [Twilio](https://www.twilio.com/) webservice, die op zijn beurt een sms verstuurd naar een specifieke ontvanger. De Raspberry Pi 3 Model B is ook nog uitgerust met een poort voor een [camera](https://www.kiwi-electronics.nl/raspberry-pi-camera-board-v2-8mp?search=camera%20raspberry%20Pi&sort=p.price&order=DESC). We kunnen hiermee bijvoorbeeld een bewakingscamera implementeren.
-
 In de kit zit de **[Sense HAT](https://www.raspberrypi.org/products/sense-hat/)** is een uitbreidingsbord dat bovenop de Raspberry Pi 3 Model B wordt aangebracht via de GPIO. Dit bord werd speciaal ontwikkeld voor de **[Astro Pi](https://astro-pi.org/)**-missie naar het International Space Station (2015).
 
-De Sense Hat bestaat uit:
+[^HAT]HAT: Hardware Attached on Top
+
+De Sense Hat[^HAT] bestaat uit:
 
 - 8×8 RGB LED matrix;
 - five-button;
@@ -202,5 +188,7 @@ sudo ntpdate pool.ntp.org
 
 De aanpassing van tijd en datum kan noodzakelijk zijn om bepaalde tools, software e.d. te kunnen downloaden. 
 
+> Opmerking
+> ---
 > Herstart Raspbian na iedere wijziging in de configuratie!
-{:.card.card-definition}
+{:.card.card-remark}

@@ -1,7 +1,7 @@
 ---
-title: Web of Things
-title_long: Web of Things
-permalink: Web of Things/
+title: Electronics
+title_long: Electronics
+permalink: electronics/
 published: false
 ---
 
