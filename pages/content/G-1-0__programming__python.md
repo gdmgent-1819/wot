@@ -8,17 +8,19 @@ published: true
 Wat is Python?
 --------------
 
-Python bibliotheken voor de Raspberry Pi
-----------------------------------------
+> Definitie
+> ---
+> Python is een geïnterpreteerde (Eng. : interpreted) programmeertaal, dit wil zeggen dat de code direct uitgevoerd kan worden zoder dat het gecompileerd (Eng.: compile) moet worden naar machinetaal instructies. Het ondersteunt verschillende programmeerparadigma's (Eng.: programming paradigms) zoals: object-oriented, imperatief, functioneel en proceduraal. Het bevat een grote standaardbibliotheek en community.
+{:.card.card-definition}
 
-### Flask
+Enkele features:
 
-[Flask](http://flask.pocoo.org/)
+- **edit-test-debug** cyclus is zeer effectief en snel
+- **significante** witruimte voor **code leesbaarheid** (Eng.: readability)
 
-### Pygame
-
-[Pygame](https://www.pygame.org/wiki/GettingStarted#Pygame%20Installation)
-
-### Processing
-
-[Processing voor python](https://github.com/jdf/processing.py)
+> References
+> ---
+> - [Python.org](https://www.python.org/)
+> - [Wikipedia: Python programming language](https://en.wikipedia.org/wiki/Python_(programming_language))
+> - [Codecademy: Learn Python](https://www.codecademy.com/learn/learn-python)
+{:.card.card-source}
