@@ -156,6 +156,31 @@ if __name__ == "__main__":
 > - [Real Python: Working With JSON Data in Python](https://realpython.com/python-json/)
 {:.card.card-source}
 
+#### Client
+
+{% highlight js %}
+<script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "<API_KEY>",
+    authDomain: "<PROJECT_ID>.firebaseapp.com",
+    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+    projectId: "<PROJECT_ID>",
+    storageBucket: "<BUCKET>.appspot.com",
+    messagingSenderId: "<SENDER_ID>",
+  };
+  firebase.initializeApp(config);
+</script>
+{% endhighlight %}
+
+> References
+> ---
+> - [Google Firebase: Add Firebase to your JavaScript Project](hhttps://firebase.google.com/docs/web/setup?authuser=0)
+> - [Google Codelabs: Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/?authuser=0#0)
+{:.card.card-source}
+
 #### Uitbreiding
 
 Via de file `sensehat_temperature.py`, met bijhorende onderstaande code, kunnen we de "echte" temperatuur opvragen van de omgeving. Dit bestand print uiteindelijk deze temperatuur naar het output-scherm in de terminal.
