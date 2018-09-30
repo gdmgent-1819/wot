@@ -44,6 +44,10 @@ Om Firebase te gebruiken binnen Python (versie 2.7+), moeten we gebruik maken va
 > - [Youtube: Getting startend with Cloud Firestore and Python](https://www.youtube.com/watch?v=yylnC3dr_no)
 > - [GitHub: Firebase Admin Python](https://github.com/firebase/firebase-admin-python)
 > - [Firebase opensource Admin SDK Python](https://firebaseopensource.com/projects/firebase/firebase-admin-python/)
+> - [Hackernoon: Introduction to Firebase](https://hackernoon.com/introduction-to-firebase-218a23186cd7)
+> - [Assist: Cloud offering: Comparison between IaaS, PaaS, SaaS, BaaS](https://assist-software.net/blog/cloud-offering-comparison-between-iaas-paas-saas-baas)
+> - [Community Tutorials: Falcon API on App Engine Standard Environment](https://cloud.google.com/community/tutorials/appengine-python-falcon)
+> - [Medium: Firebase: Developing a Web Service with Admin SDK, Flask and Google Cloud](https://medium.com/google-cloud/firebase-developing-a-web-service-with-admin-sdk-flask-and-google-cloud-6fb97eb38b80)
 {:.card.card-source}
 
 > Opmerking
@@ -87,7 +91,7 @@ default_app = firebase_admin.initialize_app(cred)
 
 ### Weather app
 
-`server.py`
+#### `server.py`
 
 {% highlight py %}
 import firebase_admin
