@@ -53,6 +53,7 @@ Om Firebase te gebruiken binnen Python (versie 2.7+), moeten we gebruik maken va
 > Opmerking
 > ---
 > - [Patrick Triest: 10 tips to host your web apps for free](https://blog.patricktriest.com/host-webapps-free/)
+> - [Google: Database Events via Firebase Functions](https://firebase.google.com/docs/functions/database-events)
 {:.card.card-remark}
 
 ### Setup
