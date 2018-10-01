@@ -1,8 +1,7 @@
 ---
 title: SenseHat
 title_long: SenseHat
-permalink: programming/python/sensehat/
-published: true
+permalink: raspberrypi/sensehat/
 ---
 
 Weather App

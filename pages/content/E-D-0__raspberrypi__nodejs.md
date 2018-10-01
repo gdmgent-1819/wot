@@ -1,8 +1,7 @@
 ---
-title: Programming
-title_long: Programming
-permalink: programming/
-published: false
+title: Node.js
+title_long: Node.js
+permalink: raspberrypi/nodejs/
 ---
 
 Node.js bibliotheken voor de Raspberry PI

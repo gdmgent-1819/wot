@@ -2,16 +2,28 @@
 title: Cloud
 title_long: Cloud
 permalink: cloud/
-published: false
+published: true
 ---
 
 Wat is IAAS?
+------------
 
-
+> TBW
 
 Wat is PAAS?
+------------
+
+> TBW
 
 Wat is SASS?
+------------
+
+> TBW
+
+Wat is BAAS?
+------------
+
+> TBW
 
 Wat is EAAS?
 ------------
@@ -22,8 +34,3 @@ Wat is EAAS?
 {:.card.card-definition}
 
 [^EAAS]: **EAAS**: Everything As A Service
-
-> References
-> ---
-> - [IFTTT](https://ifttt.com/discover)
-{:.card.card-source}
