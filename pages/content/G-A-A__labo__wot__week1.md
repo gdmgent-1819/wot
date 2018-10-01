@@ -1,7 +1,8 @@
 ---
-title: SenseHat
-title_long: SenseHat
-permalink: raspberrypi/sensehat/
+title: Week 1
+title_long: Week 1
+permalink: labo/wot/week1/
+published: true
 ---
 
 Weather App
