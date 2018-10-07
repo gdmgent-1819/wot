@@ -178,7 +178,7 @@ if __name__ == "__main__":
 
 > References
 > ---
-> - [Google Firebase: Add Firebase to your JavaScript Project](hhttps://firebase.google.com/docs/web/setup?authuser=0)
+> - [Google Firebase: Add Firebase to your JavaScript Project](https://firebase.google.com/docs/web/setup?authuser=0)
 > - [Google Codelabs: Firebase Web Codelab](https://codelabs.developers.google.com/codelabs/firebase-web/?authuser=0#0)
 {:.card.card-source}
 
