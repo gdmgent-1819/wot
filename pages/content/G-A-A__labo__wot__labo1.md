@@ -1,7 +1,7 @@
 ---
-title: Week 1
-title_long: Week 1
-permalink: labo/wot/week1/
+title: Labo 1
+title_long: Labo 1
+permalink: labo/wot/labo-1/
 published: true
 ---
 
