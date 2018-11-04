@@ -4,6 +4,49 @@ title_long: Node.js
 permalink: raspberrypi/nodejs/
 ---
 
+Fireworks
+---------
+
+Om de Sense Hat Matrix aan te spreken via JavaScript kunnen we gebruik maken van [sense-hat-led](https://www.npmjs.com/package/sense-hat-led) JavaScript-module. Origineel een fork van Jochen Hinrichsen's [sense-hat-matrix](https://github.com/jhinrichsen/sense-hat-matrix) bibliotheek. We voegen deze toe aan een bestaand project via `npm` of `yarn`.
+
+{% highlight bash %}
+npm install sense-hat-led --save
+{% endhighlight %}
+
+of
+
+{% highlight bash %}
+yarn add sense-hat-led
+{% endhighlight %}
+
+{% highlight js %}
+'use strict';
+const sense = require('sense-hat-led');
+
+function randomColor() {
+    return [
+        Math.round(Math.random()*255),
+        Math.round(Math.random()*255),
+        Math.round(Math.random()*255)
+    ]
+}
+
+function flashLED(x, y, delay) {
+    setTimeout(() => {
+        sense.setPixel(x, y, randomColor());
+        flashLED(x, y, delay)
+    }, delay);
+}
+
+sense.clear();
+for(let x=0;x<=7;x+=1) {
+    for(let y=0;y<=7;y+=1) {
+        flashLED(x, y, 400+Math.round(Math.random()*2600));
+    }
+}
+{% endhighlight %}
+
+
 Node.js bibliotheken voor de Raspberry PI
 -----------------------------------------
 
