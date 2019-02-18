@@ -2,6 +2,7 @@
 title: Python
 title_long: Python
 permalink: raspberrypi/python/
+published: false
 ---
 
 Weather App

@@ -2,7 +2,7 @@
 title: Internet
 title_long: Internet
 permalink: internet/
-published: true
+published: false
 ---
 
 Wat is het internet?
