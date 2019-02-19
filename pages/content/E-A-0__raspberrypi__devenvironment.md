@@ -198,22 +198,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Python pakketten worden geïnstalleerd via het commandline tool `pip`. [pip](https://pypi.org/project/pip/), de python package manager, kunnen we voor de voorgaande geïnstalleerde versie van python testen m.b.v. `pip3.6`.
 
-SenseHat SDK
-------------
-
-De [installatie](https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/2) van de Sense Hat-sdk is "pretty straightforward". Zorg er eerst voor dat alle APT-paketten up-to-date zijn. Vervolgens installeren we het sense-hat-pakket. Na installatie van dit pakket herstarten we het besturingssysteem Raspbian op de Raspberry Pi3.
-
-{% highlight bash %}
-sudo apt-get update 
-sudo apt-get install sense-hat 
-sudo reboot 
-{% endhighlight %}
-
-{% highlight bash %}
-sudo apt-get remove python-sense-hat python3-sense-hat
-sudo pip install sense_hat
-sudo pip3.6 install sense_hat
-{% endhighlight %}
 
 Node.js
 -------
