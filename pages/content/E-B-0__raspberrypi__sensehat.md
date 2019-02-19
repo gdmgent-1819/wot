@@ -215,7 +215,7 @@ print("x: {x}, y: {y}, z: {z}".format(**raw))
 
 > References
 > ---
-> - [COMPASS HEADING USING MAGNETOMETERS](https://aerocontent.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/Magnetic__Literature_Application_notes-documents/AN203_Compass_Heading_Using_Magnetometers.pdf)
+> - [Compass heading using magnetometers](https://aerocontent.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/Magnetic__Literature_Application_notes-documents/AN203_Compass_Heading_Using_Magnetometers.pdf)
 > - [W3.org: Magnetometer](https://www.w3.org/TR/magnetometer/)
 {:.card.card-source}
 
