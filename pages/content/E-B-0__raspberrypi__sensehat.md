@@ -158,6 +158,12 @@ print("p: {pitch}, r: {roll}, y: {yaw}".format(**orientation))
 # alternative: print(sense.orientation)
 {% endhighlight %}
 
+> References
+> ---
+> - [SenseHat: Gyroscope](https://pythonhosted.org/sense-hat/api/#imu-sensor)
+> - [W3.org: Gyroscope](https://w3c.github.io/gyroscope/)
+{:.card.card-source}
+
 ### Accelerometer
 
 De methoden `get_accelerometer()` en `get_accelerometer_raw()` spreken eerst de methode `set_imu_config(False, False, True)` aan en vervolgens de specifieke methoden voor de accelerometer.
@@ -181,6 +187,12 @@ print("x: {x}, y: {y}, z: {z}".format(**raw))
 # or alternative: print(sense.accel_raw)
 # or alternative: print(sense.accelerometer_raw)
 {% endhighlight %}
+
+> References
+> ---
+> - [SenseHat: Accelerometer](https://pythonhosted.org/sense-hat/api/#imu-sensor)
+> - [W3.org: Accelerometer](https://w3c.github.io/accelerometer/)
+{:.card.card-source}
 
 ### Magnetometer
 
@@ -216,6 +228,7 @@ print("x: {x}, y: {y}, z: {z}".format(**raw))
 > References
 > ---
 > - [Compass heading using magnetometers](https://aerocontent.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/Magnetic__Literature_Application_notes-documents/AN203_Compass_Heading_Using_Magnetometers.pdf)
+> - [SenseHat: Magnetometer](https://pythonhosted.org/sense-hat/api/#imu-sensor)
 > - [W3.org: Magnetometer](https://www.w3.org/TR/magnetometer/)
 {:.card.card-source}
 
