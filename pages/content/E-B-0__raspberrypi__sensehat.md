@@ -1,7 +1,7 @@
 ---
 title: SenseHAT
 title_long: SenseHAT
-permalink: raspberrypi/senseHAT/
+permalink: raspberrypi/sensehat/
 ---
 
 Inleiding
