@@ -1,6 +1,72 @@
 # --------------
 # DO NOT MODIFY!
 # --------------
+- id: 1819-BS
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: FunGDM-BS
+    long : Besturingssystemen
+  academic-year: 2018-2019
+  authors: # First is owner
+    - OPR
+  programme:
+    institute : AHS
+    department: PBAGDM
+
+- id: 1819-NMD2
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: NMD2
+    long : New Media Design II
+  academic-year: 2018-2019
+  authors: # First is owner
+    - OPR
+    - SA
+    - EVR
+    - BM
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : CMO
+
+- id: 1819-NMD3
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: NMD3
+    long : New Media Design III
+  academic-year: 2018-2019
+  authors: # First is owner
+    - OPR
+    - SA
+    - EVR
+    - BM
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : CMO
+
+- id: 1819-BAP-CMO
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: BAPCMO
+    long : Bachelorproef CMO
+  academic-year: 2018-2019
+  authors: # First is owner
+    - SA
+    - BM
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+
 - id: 1819-CMSDEVELOPMENT
   type: MODULE
   lang: nl
@@ -23,17 +89,33 @@
   lang: nl
   color: primary
   title:
-    short: CS
-    long : Computer Science
+    short: CSSE
+    long : Computer Science & Software Engineering I
   academic-year: 2018-2019
   authors: # First is owner
     - KR
-    - AAD
     - OPR
   programme:
     institute : AHS
     department: PBAGDM
     major     : MMP
+    minor     : NMD
+
+- id: 1819-CSSE2
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: CSSE2
+    long : Computer Science & Software Engineering II
+  academic-year: 2018-2019
+  authors: # First is owner
+    - OPR
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD
 
 - id: 1819-MOBILEDEVELOPMENT
   type: MODULE
@@ -98,7 +180,6 @@
   academic-year: 2018-2019
   authors: # First is owner
     - PDP
-    - AAD
     - DDW
     - EVR
     - FR
@@ -112,8 +193,8 @@
   lang: nl
   color: primary
   title:
-    short: UI & UX
-    long : User Interface & User eXperience
+    short: UI/UX
+    long : User Interface & User Experience
   academic-year: 2018-2019
   authors: # First is owner
     - OPR
@@ -141,6 +222,8 @@
   programme:
     institute : AHS
     department: PBAGDM
+    major     : MMP
+    minor     : NMD
 
 - id: 1819-XR
   type: MODULE
@@ -151,6 +234,23 @@
     long : Mixed Reality
   academic-year: 2018-2019
   authors: # First is owner
+    - OPR
+  programme:
+    institute : AHS
+    department: PBAGDM
+    major     : MMP
+    minor     : NMD
+
+- id: ICT
+  type: MODULE
+  lang: nl
+  color: primary
+  title:
+    short: ICT
+    long : ICT
+  academic-year: 2018-2019
+  authors: # First is owner
+    - KR
     - OPR
     - PDP
   programme:
